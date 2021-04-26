@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CalcButtonNumStyle">
+        <item name="android:textSize">@dimen/calc_button_size</item>
+        <item name="backgroundTint">@color/button_num</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintHorizontal_chainStyle">packed</item>
+        <item name="layout_constraintVertical_chainStyle">packed</item>
+    </style>
+
+    <style name="CalcButtonSignStyle">
+        <item name="android:textSize">@dimen/calc_button_size</item>
+        <item name="backgroundTint">@color/button_sym</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintHorizontal_chainStyle">packed</item>
+        <item name="layout_constraintVertical_chainStyle">packed</item>
+    </style>
+
+    <dimen name="calc_button_size">20dp</dimen>
+</resources>
