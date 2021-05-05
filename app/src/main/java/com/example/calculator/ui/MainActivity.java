@@ -156,6 +156,14 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
             }
         });
 
+        findViewById(R.id.switch1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
     }
 
     @Override

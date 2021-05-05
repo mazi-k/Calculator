@@ -18,4 +18,5 @@
     <string name="btn_point">.</string>
     <string name="btn_div">/</string>
     <string name="btn_equal">=</string>
+    <string name="switch_theme">Switch Theme</string>
 </resources>
