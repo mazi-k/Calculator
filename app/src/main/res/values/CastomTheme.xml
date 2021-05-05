@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/vase</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#f8bbd0</item>
+        <item name="colorPrimaryVariant">#ec407a</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#b39ddb</item>
+        <item name="colorSecondaryVariant">#9575cd</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+
+
+    <style name="CustomTheme2" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/forest</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#f8bbd0</item>
+        <item name="colorPrimaryVariant">#ec407a</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#b39ddb</item>
+        <item name="colorSecondaryVariant">#9575cd</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+</resources>

@@ -19,4 +19,10 @@
     <string name="btn_div">/</string>
     <string name="btn_equal">=</string>
     <string name="switch_theme">Switch Theme</string>
+    <string name="settings">settings</string>
+    <string name="text_settings">Настройки</string>
+    <string name="text_switch_theme">Смена темы</string>
+    <string name="day">Day</string>
+    <string name="night">Night</string>
+    <string name="exit">Exit</string>
 </resources>

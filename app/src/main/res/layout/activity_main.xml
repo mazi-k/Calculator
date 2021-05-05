@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity"
-
-    android:background="@drawable/forest">
+    tools:context=".ui.MainActivity">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textField"
@@ -174,14 +172,13 @@
         app:layout_constraintEnd_toEndOf="@id/button_div"
         style="@style/CalcButtonSignStyle"/>
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/switch_theme"
-        app:layout_constraintBottom_toTopOf="@+id/textField"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_settings"
+        style="@style/CalcButtonSignStyle"
+        android:backgroundTint="@color/white"
+        android:text="@string/settings"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
