@@ -1,8 +1,12 @@
 package com.example.calculator.ui;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
     private Presenter presenter;
     private TextView resultText;
     private final static String keyPresenter = "Presenter";
+    public String CODE_THEME = "default";
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle instanceState) {
@@ -30,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -156,14 +163,14 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
             }
         });
 
-        findViewById(R.id.switch1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_settings).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                intent.putExtra("THEME", CODE_THEME);
+                startActivityForResult(intent, 1);
             }
         });
-
-
     }
 
     @Override
@@ -171,4 +178,20 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
         resultText.setText(result);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data == null) {return;}
+        super.onActivityResult(requestCode, resultCode, data);
+        CODE_THEME = data.getStringExtra("THEME");
+    }
+
+    protected void setTheme(){
+        if(CODE_THEME.equals("1")){
+            setTheme(R.style.CustomTheme);
+        } else if (CODE_THEME.equals("2")){
+            setTheme(R.style.CustomTheme2);
+        } else {
+            Toast.makeText(this, "theme is not be changed", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
